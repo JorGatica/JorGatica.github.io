@@ -1,25 +1,380 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portafolio</title>
     <!--Estilos-->
-    <link rel="stylesheet" href="style.css">
-    <title>JorgeMGL</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-<header></header>
-<main>
-    <div class="container">
-        <div class="row">
-            <p>Empezando mi propia pagina web</p>
-            <P>Esta página actualmente se encuentra en desarrolo</P>
-            <a href="https://jorgatica.github.io/curso-de-javascript-para-frontend/"> Primer sitio web de prueba Yard sale</a>
-        </div>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="index.html">JorgeMGL</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE M&iacute;</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portafolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
     </div>
-</main>
-<footer></footer>
-  
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="./img/jorge.jpg" alt="">
+            </div>
+            <h1>Jorge Gatica</h1>
+            <h2>Estudiante en Platzi
+                Full Stack Developer</h2>
+            <div class="redes">
+                <a href="https://www.facebook.com/profile.php?id=100090925062644" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/JorgeMGLgg"><i class="fa-brands fa-twitter" target="_blank"></i></a>
+                <a href="https://platzi.com/p/maujpg/"><i class="fa-solid fa-university" target="_blank"></i></a>
+                <a href="https://www.linkedin.com/in/jorge-mauricio-gatica-l%C3%B3pez-b3a5661ba?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJU2re9lNR%2BGz5mglDSRLGA%3D%3D" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/JorgeMGL" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre M&iacute;</h2>
+            <p><span>Hola!, soy Jorge Gatica.</span> Soy estudiante en la plataforma virtual Platzi. Me apasiona el desarrollo web y aplicaciones m&oacute;viles. Busco la manera de especializarme del lado del backend con tecnologias como javascript con node, c# con .Net o python con Django.
+            Gracias a Platzi, he podido desarrollar mis habilidades de programaci&oacute;n. Y de esta manera poder costear mis futuros estudios universitarios.  </p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Tel&eacute;fono</strong>
+                            +502 38804434
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            jorgemgl@outlook.es
+                        </li>
+                        <li>
+                            <strong>Website</strong>
+                            jorgemgl.github.io
+                        </li>
+                        <li>
+                            <strong>Dirección</strong>
+                            San Miguel Petapa, Guatemala, Guatemala
+                        </li>
+                        <li>
+                            <strong>Cargo</strong>
+                            <span>FREELANCE</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>M&Uacute;SICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-podcast"></i>
+                            <span>PODCAST</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>DEPORTE</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-book"></i>
+                            <span>LIBROS</span>
+                        </div>                      
+                    </div>
+                </div>
+            </div>
+            <button>
+                <a href="./img/jorgemglcv.pdf" download="jorgemglcv.pdf">Descargar CV <i class="fa-solid fa-download"></i>
+                    <span class="overlay"></span></a> 
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>89%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>C# y .Net</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>MySQL</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>55%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Professional Skills</h3>
+                    <div class="skill">
+                        <span>Comunicaci&oacute;n</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>99%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedicaci&oacute;n</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>65%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Proyect Management</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>94%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curr&iacute;culum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educaci&oacute;n</h3>
+                    <div class="item izq">
+                        <h4>Carrera Profesional Full Stack Developer con Javascrip</h4>
+                        <span class="casa">Plataforma Virtual Platzi</span>
+                        <span class="fecha">Febrero 2023 hasta la actualidad</span>
+                        <p>En este curso estoy aprendiendo a construir aplicaciones y sitios web tanto backend como frontend, usando  JavaScript, Node y React.<br>
+                        Mis futuras metas dentro de la plataforma,  las rutas de aprendizaje de seguridad informatica, administraci&oacute;n de servidores, desarrollo con IBM cloud, administraci&oacute;n de servidores y DevOps.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Carrera Perito Contador Con Orientacion en Computaci&oacute;n</h4>
+                        <span class="casa">Instituto De Educaci&oacute;n Diversificada por Cooperativa Villa Hermosa.</span>
+                        <span class="fecha">2018-2020</span>
+                        <p>En este establecimiento fue donde estudie y culmine con mis estudios como contador, logrando obtener un tìtulo de nivel medio.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="col derecha">
+                    <h3>Experiencia de trabajo</h3>
+                    <div class="item der">
+                        <h4>FREELANCE</h4>
+                        <span class="casa">full Stack Developer</span>
+                        <span class="fecha">2023</span>
+                        <p> ¿Deseas que te haga una pagina web? yo te la hago con mucho gusto. Por favor, cu&eacute;ntame m&aacute;s sobre lo que necesitas en tu sitio web y estar&eacute; encantado de ayudarte a crear una p&aacute;gina web que se adapte a tus necesidades y objetivos. Podemos discutir los detalles como el diseño, el contenido, las funcionalidades, la plataforma de alojamiento y cualquier otro requisito que tengas en mente. Tambi&eacute;n puedo proporcionarte una estimaci&oacute;n de tiempo y costos para completar el proyecto. ¡Empecemos! </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTAFOLIO -->
+    <section id="portafolio" class="portafolio">
+        <div class="contenido-seccion">
+            <h2>PORTAFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="./img/yardsale.png" alt="Venta de Garage">
+                    <div class="overlay">
+                        <a href="https://jorgemgl.github.io/curso-practico-de-javascript/" target="_blank"><h3>Yard-Sale</h3>
+                            <p>todav&iacute;a en desarrollo</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="./img/proyecto.jpg" alt="">
+                    <div class="overlay">
+                        <a href="#" target="_blank">
+                            <h3>Pr&oacute;ximamente</h3>
+                            <p>Jejeje</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="./img/proyecto.jpg"  alt="">
+                    <div class="overlay">
+                        <a href="#" target="_blank">
+                            <h3>Pr&oacute;ximamente</h3>
+                            <p>Jejeje</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="./img/proyecto.jpg"  alt="">
+                    <div class="overlay">
+                        <a href="#" target="_blank">
+                            <h3>Pr&oacute;ximamente</h3>
+                            <p>Jejeje</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="./img/proyecto.jpg"  alt="">
+                    <div class="overlay">
+                        <a href="#" target="_blank">
+                            <h3>Pr&oacute;ximamente</h3>
+                            <p>Jejeje</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="./img/proyecto.jpg"  alt="">
+                    <div class="overlay">
+                        <a href="#" target="_blank">
+                            <h3>Pr&oacute;ximamente</h3>
+                            <p>Jejeje</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <form class="col" action="recibir-datos.php" method="post">
+                    <input type="text" name="nombre" id="nombre" placeholder="Tú Nombre">
+                    <input type="text" name="telefono" id="telefono" placeholder="Número telefónico">
+                    <input type="text" name="correo" id="correo" placeholder="Dirección de correo">
+                    <input type="text" name="tema" id="tema" placeholder="Tema">
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                    <button type="submit" class="botno-primario">
+                        Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </form>
+                <!-- Mapa -->
+                <div class="col">
+                    <img src="img/ubicacion.png" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                San Miguel Petapa, Guatemala
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                 +502 3880-4434
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: jorgemgl@outlook.es
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.facebook.com/profile.php?id=100090925062644" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/JorgeMGLgg"><i class="fa-brands fa-twitter" target="_blank"></i></a>
+            <a href="https://platzi.com/p/maujpg/"><i class="fa-solid fa-university" target="_blank"></i></a>
+            <a href="https://www.linkedin.com/in/jorge-mauricio-gatica-l%C3%B3pez-b3a5661ba?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BJU2re9lNR%2BGz5mglDSRLGA%3D%3D"><i class="fa-brands fa-linkedin-in" target="_blank"></i></a>
+            <a href="#"><i class="fa-brands fa-github" target="_blank"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
