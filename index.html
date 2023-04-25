@@ -325,8 +325,19 @@
         <div class="contenido-seccion">
             <h2>CONTACTO</h2>
             <div class="fila">
+
+                <form action="enviar.php" method="post">
+                    <input type="text" name="name" id="name" class="name" placeholder="NOMBRE">
+                    <input type="text" name="mail" id="mail" class="email" placeholder="CORREO">
+                    <input type="text" name="phone" id="subject" class="subject" placeholder="TELÉFONO">
+                    <textarea name="message" class="message" placeholder="MENSAJE ... " id="message"></textarea>
+                    <div class="clear"></div>
+                        <div class="col-md-8"> 
+                            <button type="submit" class="btn btn-primary">ENVIAR </button>
+                </div>
+                </form>
                 <!-- Formulario -->
-                <form class="col" action="recibir-datos.php" method="post">
+                <!--<form class="col" action="recibir-datos.php" method="post">
                     <input type="text" name="nombre" id="nombre" placeholder="Tú Nombre">
                     <input type="text" name="telefono" id="telefono" placeholder="Número telefónico">
                     <input type="text" name="correo" id="correo" placeholder="Dirección de correo">
@@ -336,7 +347,7 @@
                         Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
                         <span class="overlay"></span>
                     </button>
-                </form>
+                </form>-->
                 <!-- Mapa -->
                 <div class="col">
                     <img src="img/ubicacion.png" alt="">
